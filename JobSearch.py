@@ -101,7 +101,7 @@ for i in range(0, 40, 10):
 
 df = pd.DataFrame(Joblist)
 df.sort_values(by='title')
-
+df.nsmallest(70,'summary')
 print(df.head())
 
 df.to_csv('job.csv')
